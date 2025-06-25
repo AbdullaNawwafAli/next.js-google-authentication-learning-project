@@ -9,12 +9,11 @@ export const logout = async () => {
     try {
         // Force redirect to home page and clear all session data
         await signOut({
-            redirectTo: '/',
+            redirectTo: '/login',
             redirect: true
         });
     } catch (error) {
         console.error('Logout error:', error);
-        // Fallback: redirect to home page even if signOut fails
         throw new Error('Failed to logout properly');
     }
 }
