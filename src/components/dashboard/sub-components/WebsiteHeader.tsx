@@ -1,7 +1,10 @@
+import { auth } from '@/app/auth'
 import { Box, Button, Typography } from '@mui/material'
 import React from 'react'
 
-const WebsiteHeader: React.FC<{ children?: React.ReactNode }> = ({ children }) =>{
+const WebsiteHeader: React.FC<{ children?: React.ReactNode }> = async ({ children }) =>{
+  const session = await auth()
+  
   return (
     <Box>
 <Box sx={{
@@ -24,6 +27,7 @@ const WebsiteHeader: React.FC<{ children?: React.ReactNode }> = ({ children }) =
           <Button>
             Dashboard
           </Button>
+          {session ? <Typography variant="h6">{session.user?.email}</Typography> : <Typography variant="h6">Not logged in</Typography>}
 
         </Box>
         {children}
