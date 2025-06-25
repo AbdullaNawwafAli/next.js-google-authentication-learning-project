@@ -1,7 +1,8 @@
 'use client'
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
-import { login } from "@/lib/actions/auth";
+
+import LoginButton from "./sub-components/LoginButton";
 
 const LoginPage = () => {
   return (
@@ -22,12 +23,7 @@ const LoginPage = () => {
         <Typography variant="h1">LOG IN</Typography>
 
         <span className="text-gray-400">Not signed in</span>
-      <Button
-        onClick={() => login()}
-        className="px-4 py-2 bg-blue-700 text-white rounded hover:bg-blue-800 transition duration-150"
-      >
-        Sign In
-      </Button>
+        <LoginButton />
       </Box>
     </Box>
   );
