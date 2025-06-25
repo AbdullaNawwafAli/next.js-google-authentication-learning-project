@@ -1,14 +1,17 @@
 'use client';
-
-import { logout } from '@/components/LoginForm/actions';
 import { Button } from '@mui/material';
+import { logout } from '@/lib/actions/auth';
 
 export default function LogoutButton() {
+ 
+  
   return (
-    <form action={logout}>
-      <Button type="submit" variant="contained" color="primary">
-        Log Out
-      </Button>
-    </form>
+    <Button 
+      onClick={() =>logout()} 
+      variant="contained" 
+      color="primary"
+    >
+      Log Out
+    </Button>
   );
 }
