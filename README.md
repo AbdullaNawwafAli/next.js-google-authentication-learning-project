@@ -15,7 +15,7 @@ npm install react-hook-form
 
 npm install @mui/material @emotion/react @emotion/styled
 
-npm install next-auth
+npm install next-auth@beta
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
