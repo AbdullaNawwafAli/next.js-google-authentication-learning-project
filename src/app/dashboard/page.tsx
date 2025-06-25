@@ -1,5 +1,5 @@
 
-import DashboardPage from "@/components/DashboardPage";
+import DashboardPage from "@/components/dashboard/DashboardPage";
 import { redirect } from "next/navigation";
 import { auth } from "../auth";
 

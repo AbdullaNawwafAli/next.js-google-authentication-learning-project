@@ -1,7 +1,7 @@
 import { Box, Link, Typography } from '@mui/material'
 import React from 'react'
-import LogoutButton from './LogOutButton'
-import WebsiteHeader from './WebsiteHeader'
+import LogoutButton from '../LogOutButton'
+import WebsiteHeader from '../WebsiteHeader'
 
 const DashboardPage = () => {
     
